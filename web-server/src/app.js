@@ -77,7 +77,7 @@ app.get('*', (req, res) => {
   res.render('404', { errorMessage: '404 not found' })
 })
 
-const PORT = 3000
+const PORT = 3001
 app.listen(PORT, () => {
   console.log(`Server is up on port ${PORT}`)
 })

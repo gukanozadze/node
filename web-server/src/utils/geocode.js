@@ -7,9 +7,6 @@ const geocode = (city, callback) => {
   // https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(city)}.json/?acc
   request({ url: url, json: true }, (error, response, body) => {
 
-    console.log(response.body.error)
-    console.log(error)
-    
     if(error){
       callback('Unable to connect to server', undefined)
     }else if(!body.features[0]){
