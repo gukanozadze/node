@@ -1,27 +1,14 @@
-// const geocode = (address, callback) => {
+const doWorkCallback = (callback) => {
 
-//   setTimeout(() => {
-//     const data = {
-//       lat: 0,
-//       long: 0
-//     }
-    
-//     callback(data)
-//   }, 2000)
-  
-// }
-
-// geocode('Philadelpiha', (data) => {
-//   console.log(data)
-// })
-
-const add = (num1, num2, callback) => {
   setTimeout(() => {
-    callback(num1 + num2)
+    callback('This is my error!', undefined)
+
+    callback(undefined, 'ds')
   }, 2000)
 }
 
-
-add(1, 4, (sum) => {
-  console.log(sum)
+doWorkCallback((err, result) => {
+  if(err) return console.log(err)
+  console.log(result)
+  
 })
