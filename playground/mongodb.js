@@ -1,7 +1,5 @@
 const {MongoClient, ObjectID} = require('mongodb')
 
-
-
 const connectionUrl = 'mongodb://localhost:27017'
 const dbName = 'names-db'
 
